@@ -1,0 +1,192 @@
+$date
+	Wed Dec 01 20:01:56 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_sequence $end
+$var wire 3 ! q [2:0] $end
+$var reg 1 " clk $end
+$var reg 3 # d [2:0] $end
+$var reg 1 $ rst $end
+$scope module counter $end
+$var wire 1 " clk $end
+$var wire 3 % d [2:0] $end
+$var wire 3 & q [2:0] $end
+$var wire 1 ' q1q0 $end
+$var wire 1 ( q2q0 $end
+$var wire 1 ) q2q0_bar $end
+$var wire 3 * qbar [2:0] $end
+$var wire 1 $ rst $end
+$scope module dff0 $end
+$var wire 1 " clk $end
+$var wire 1 + d $end
+$var wire 1 $ rst $end
+$var reg 1 , q $end
+$var reg 1 - qbar $end
+$upscope $end
+$scope module dff1 $end
+$var wire 1 " clk $end
+$var wire 1 . d $end
+$var wire 1 $ rst $end
+$var reg 1 / q $end
+$var reg 1 0 qbar $end
+$upscope $end
+$scope module dff2 $end
+$var wire 1 " clk $end
+$var wire 1 1 d $end
+$var wire 1 $ rst $end
+$var reg 1 2 q $end
+$var reg 1 3 qbar $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+13
+02
+x1
+10
+0/
+x.
+1-
+0,
+x+
+b111 *
+0)
+0(
+0'
+b0 &
+bx %
+1$
+bx #
+1"
+b0 !
+$end
+#1
+0"
+#2
+1"
+#3
+0"
+#4
+1"
+#5
+0"
+0$
+#6
+x'
+x(
+x)
+x-
+x,
+x0
+x/
+bx *
+x3
+bx !
+bx &
+x2
+1"
+#7
+0"
+#8
+1"
+#9
+0"
+#10
+1"
+#11
+0"
+#12
+1"
+#13
+0"
+#14
+1"
+#15
+0"
+#16
+1"
+#17
+0"
+#18
+1"
+#19
+0"
+#20
+1"
+#21
+0"
+#22
+1"
+#23
+0"
+#24
+1"
+#25
+0"
+#26
+1"
+#27
+0"
+#28
+1"
+#29
+0"
+#30
+1"
+#31
+0"
+#32
+1"
+#33
+0"
+#34
+1"
+#35
+0"
+#36
+1"
+#37
+0"
+#38
+1"
+#39
+0"
+#40
+1"
+#41
+0"
+#42
+1"
+#43
+0"
+#44
+1"
+#45
+0"
+#46
+1"
+#47
+0"
+#48
+1"
+#49
+0"
+#50
+1"
+#51
+0"
+#52
+1"
+#53
+0"
+#54
+1"
+#55
+0"

@@ -1,0 +1,102 @@
+$date
+	Sun Dec 05 12:49:54 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_sequence $end
+$var wire 3 ! y [2:0] $end
+$var reg 1 " clk $end
+$var reg 1 # rst $end
+$scope module seq_count $end
+$var wire 1 " clk $end
+$var wire 1 # rst $end
+$var wire 3 $ y [2:0] $end
+$var reg 3 % cur_state [2:0] $end
+$var reg 3 & next_state [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx &
+bx %
+bx $
+1#
+0"
+bx !
+$end
+#10
+b101 &
+b0 !
+b0 $
+b0 %
+1"
+#20
+0"
+0#
+#30
+b111 &
+b101 !
+b101 $
+b101 %
+1"
+#40
+0"
+#50
+b110 &
+b111 !
+b111 $
+b111 %
+1"
+#60
+0"
+#70
+b11 &
+b110 !
+b110 $
+b110 %
+1"
+#80
+0"
+#90
+b10 &
+b11 !
+b11 $
+b11 %
+1"
+#100
+0"
+#110
+b0 &
+b10 !
+b10 $
+b10 %
+1"
+#120
+0"
+#130
+b101 &
+b0 !
+b0 $
+b0 %
+1"
+#140
+0"
+#150
+b111 &
+b101 !
+b101 $
+b101 %
+1"
+#160
+0"
+#170
+b110 &
+b111 !
+b111 $
+b111 %
+1"
