@@ -1,0 +1,71 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "E:\iverilog\lib\ivl\system.vpi";
+:vpi_module "E:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "E:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "E:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "E:\iverilog\lib\ivl\va_math.vpi";
+S_000001994a705830 .scope module, "bufif_tb" "bufif_tb" 2 3;
+ .timescale 0 0;
+v000001994a86b9b0_0 .var "in0", 0 0;
+v000001994a86ba50_0 .var "in1", 0 0;
+RS_000001994a707038 .resolv tri, L_000001994a8668d0, L_000001994a866d40;
+v000001994a86baf0_0 .net8 "out", 0 0, RS_000001994a707038;  2 drivers, strength-aware
+v000001994a86bb90_0 .var "sel", 0 0;
+S_000001994a7059c0 .scope module, "mux" "mux_using_bufif" 2 8, 3 1 0, S_000001994a705830;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "in0";
+    .port_info 1 /INPUT 1 "in1";
+    .port_info 2 /INPUT 1 "sel";
+    .port_info 3 /OUTPUT 1 "out";
+L_000001994a8668d0 .functor BUFIF0 1, v000001994a86b9b0_0, v000001994a86bb90_0, C4<0>, C4<0>;
+L_000001994a866d40 .functor BUFIF1 1, v000001994a86ba50_0, v000001994a86bb90_0, C4<0>, C4<0>;
+v000001994a705b50_0 .net "in0", 0 0, v000001994a86b9b0_0;  1 drivers
+v000001994a866b00_0 .net "in1", 0 0, v000001994a86ba50_0;  1 drivers
+v000001994a866830_0 .net8 "out", 0 0, RS_000001994a707038;  alias, 2 drivers, strength-aware
+v000001994a86b910_0 .net "sel", 0 0, v000001994a86bb90_0;  1 drivers
+    .scope S_000001994a705830;
+T_0 ;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001994a86b9b0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001994a86ba50_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001994a86bb90_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001994a86b9b0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001994a86ba50_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001994a86bb90_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001994a86b9b0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001994a86ba50_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001994a86bb90_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001994a86b9b0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001994a86ba50_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001994a86bb90_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_000001994a705830;
+T_1 ;
+    %vpi_call 2 23 "$monitor", $time, "ns in0=%b; in1=%b; sel=%b, out=%b", v000001994a86b9b0_0, v000001994a86ba50_0, v000001994a86bb90_0, v000001994a86baf0_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testBench.v";
+    "./2to1Mux_buff.v";
