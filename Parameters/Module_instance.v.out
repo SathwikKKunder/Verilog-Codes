@@ -1,0 +1,36 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "E:\iverilog\lib\ivl\system.vpi";
+:vpi_module "E:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "E:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "E:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "E:\iverilog\lib\ivl\va_math.vpi";
+S_0000018545cb86f0 .scope module, "top" "top" 2 14;
+ .timescale 0 0;
+S_0000018545b65000 .scope module, "w1" "hello_world" 2 18, 2 2 0, S_0000018545cb86f0;
+ .timescale 0 0;
+P_0000018545b65190 .param/l "delay1" 0 2 4, +C4<00000000000000000000000000000101>;
+P_0000018545b651c8 .param/l "delay2" 0 2 5, +C4<00000000000000000000000000000110>;
+P_0000018545b65200 .param/l "delay3" 0 2 6, +C4<00000000000000000000000000000111>;
+S_0000018545b65240 .scope module, "w2" "hello_world" 2 19, 2 2 0, S_0000018545cb86f0;
+ .timescale 0 0;
+P_0000018545b653d0 .param/l "delay1" 0 2 4, +C4<00000000000000000000000000000110>;
+P_0000018545b65408 .param/l "delay2" 0 2 5, +C4<00000000000000000000000000000101>;
+P_0000018545b65440 .param/l "delay3" 0 2 6, +C4<00000000000000000000000000011011>;
+    .scope S_0000018545b65000;
+T_0 ;
+    %vpi_call 2 9 "$display", "Displaying hello_world delay1 = %d\012delay2 = %d\012delay3 = %d", P_0000018545b65190, P_0000018545b651c8, P_0000018545b65200 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0000018545b65240;
+T_1 ;
+    %vpi_call 2 9 "$display", "Displaying hello_world delay1 = %d\012delay2 = %d\012delay3 = %d", P_0000018545b653d0, P_0000018545b65408, P_0000018545b65440 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Module_instance.v";
